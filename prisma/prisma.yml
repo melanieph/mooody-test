@@ -1,0 +1,12 @@
+endpoint: https://mooody-dummy-f27aaa07f3.herokuapp.com/mooody-project/dev
+
+datamodel: datamodel.prisma
+
+generate:
+  - generator: typescript-client
+    output: ./generated/prisma-client/
+    hooks:
+      post-deploy: 
+        - prisma generate
+
+    
